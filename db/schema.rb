@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_02_15_095610) do
+ActiveRecord::Schema[8.0].define(version: 2025_02_15_104648) do
   create_table "matches", force: :cascade do |t|
     t.string "title"
     t.string "sport_type"
@@ -20,6 +20,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_02_15_095610) do
     t.integer "host_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.time "time"
     t.index ["host_id"], name: "index_matches_on_host_id"
   end
 

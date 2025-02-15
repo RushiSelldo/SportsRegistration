@@ -1,0 +1,13 @@
+<h2 class="mb-4">Matches</h2>
+<%= link_to 'Create New Match', new_match_path, class: "btn btn-success mb-3" %>
+<ul class="list-group">
+  <% @matches.each do |match| %>
+    <li class="list-group-item d-flex justify-content-between">
+      <%= link_to match.title, match_path(match), class: "text-decoration-none" %>
+      <span>
+        <%= link_to 'Edit', edit_match_path(match), class: "btn btn-outline-primary btn-sm" %>
+        <%= link_to 'Delete', match_path(match), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-outline-danger btn-sm" %>
+      </span>
+    </li>
+  <% end %>
+</ul>
